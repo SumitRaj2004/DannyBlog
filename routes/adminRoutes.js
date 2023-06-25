@@ -1,5 +1,4 @@
 import express from "express"
-import Admin from "../models/adminModel.js";
 import Blog from "../models/blogModel.js";
 import { config } from "dotenv";
 import jwt from "jsonwebtoken";
