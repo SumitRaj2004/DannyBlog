@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Admin Blogs</title>
+</head>
+<body>
+    <section class="adminBlogs-section">
+        <div class="container">
+            <div class="adminBlogs-upper">
+                <h1 class="adminBlogs-title">Admin Blogs</h1>
+                <a href="/admin/blogs/add">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add</span>
+                </a>
+            </div>
+            <ul class="adminBlogs-blogs">
+                {{#each blogs}}
+                    <li class="adminBlogs-blog">
+                        <a href="/admin/blogs/{{this._id}}">{{this.title}}</a>
+                        <div class="adminBlogs-blog-btns">
+                            <a href="/admin/blogs/update/{{this._id}}" class="adminBlogs-blog-edit-btn">Edit</a>
+                            <form action="/admin/blogs/{{this._id}}?_method=DELETE" method="POST">
+                                <input type="submit" value="Delete" class="adminBlogs-blog-delete-btn">
+                            </form>
+                        </div>
+                    </li>
+                {{/each}}    
+            </ul>
+        </div>
+    </section>
+    {{>footer}}
+</body>
+</html>

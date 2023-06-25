@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+    <title>Admin</title>
+</head>
+<body>
+    <section class="adminLogin">
+        <div class="container">
+            <h1 class="adminLogin-title">Login</h1>
+            <p class="error-message">{{errorMessage}}</p>
+            <form action="/admin" class="adminLogin-form" method="POST">
+                <input type="email" name="email" placeholder="Your Email" value="{{emailValue}}">
+                <input type="password" name="password" placeholder="Your Password" value="{{passwordValue}}">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </section>
+    {{>footer}}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    {{>navbar}}
+    <div class="blogs-section">
+        <div class="container">
+            <div class="blogs-upper">
+                <h1 class="blogs-title">Blogs</h1>
+                <form action="/blogs", method="GET">
+                    <input type="search" name="search" placeholder="Search..">
+                </form>
+            </div>
+            <ul class="blogs">
+                {{#each blogs}}
+                    <li class="blog">
+                        <a href="/blogs/{{this._id}}">{{this.title}}</a>
+                        <p class="createdAt">{{this.createdAt}}</p>
+                    </li>
+                {{/each}}    
+            </ul>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>

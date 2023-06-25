@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Update</title>
+</head>
+<body>
+    <section class="updateBlog-section">
+        <div class="container">
+            <h1 class="updateBlog-title">Update Blog</h1>
+            
+            <form action="/admin/blogs/{{id}}?_method=PATCH" method="POST" class="updateBlog-form">
+                <input type="text"  placeholder="Title" name="title" value="{{titleValue}}">
+                <textarea placeholder="Description..." name="description">{{descriptionValue}}</textarea>
+                <input type="submit" value="Update">
+            </form>
+        </div>
+    </section>
+    {{>footer}}
+</body>
+</html>
