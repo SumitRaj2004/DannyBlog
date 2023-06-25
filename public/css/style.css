@@ -295,6 +295,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .adminBlogs-section{
     padding: 4rem 0 8rem 0;
     background: var(--primary-color);
+    flex-grow: 1;
 }
 
 .adminBlogs-upper{
