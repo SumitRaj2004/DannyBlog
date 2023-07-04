@@ -1,6 +1,6 @@
 const createdAt = document.querySelectorAll(".createdAt");
 createdAt.forEach((el) => {
-    el.textContent = `${new Date(el.textContent).getDate()}.${new Date(el.textContent).getMonth()}.${new Date(el.textContent).getFullYear()}`
+    el.textContent = `${new Date(el.textContent).getDate()}.${new Date(el.textContent).getMonth() + 1}.${new Date(el.textContent).getFullYear()}`
 })
 
 const adminLoginForm = document.querySelector(".adminLogin-form");
